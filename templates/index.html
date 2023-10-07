@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}<title>КВ-Ремстрой</title>{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="icon" href="{% static 'image/logo.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'image/logo.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+
+          <div class="inner">
+
+            <div><a href=""><img src="{% static 'image/logo.png' %}" alt=""/></a></div>
+
+            <div class="logo-text">
+              <a href="{% url 'home' %}"><span class="head">КВ-Ремстрой</span></a>
+            </div>
+
+            {% if error %}
+            <span class="error">{{ error }}</span>
+            {% endif %}
+            {% if success %}
+                <span class="success">{{ success }}</span>
+            {% endif %}
+            
+          </div>
+          
+        </div>
+        {% block menu %}
+        <div class="menu">
+          <div class="inner">
+            <a href="{% url 'home' %}">Главная</a>
+            <a href="#about">О нас</a>
+            <a href="#service">Услуги</a>
+            <a href="#contacts">Контакты</a>
+          </div>
+        </div>
+        {% endblock %}
+    </header>
+
+    <div class="invisible"></div>
+    
+    <main>
+        {% block main %}
+        <section>
+            <div class="main">
+                <div class="h1" id="main">Дизайнерский ремонт
+                    и отделка премиум-класса
+                    <div class="but">
+                        <a href="#contacts"><input type="button" value="Заказать расчет"></a>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section class="second" id="about">
+            <div class="second-img"></div>
+            <div class="second-text">
+                <h1>
+                    Ведущая компания по ремонту жилья
+                </h1>
+                <p>Только качественные, люксовые материалы! Мы работаем с 2000 года! У нас много довольных клиентов. Нам доверяют больше людей...</p>
+                <a href="#"><input type="button" value="Подробнее"></a>
+            </div>
+        </section>
+        <section class="services" id="service">
+            <h1>Наши услуги</h1>
+            <div class="cards">
+                <div class="card card1"><a href="{% url 'kitchen' %}">Кухни</a></div>
+                <div class="card card2"><a href="{% url 'bath' %}">Ванные</a></div>
+                <div class="card card3"><a href="{% url 'interior' %}">Интерьер</a></div>
+            </div>
+            <div class="btn">
+                <a href="#service"><input type="button" value="Все услуги"></a>
+            </div>
+        </section>
+        {% endblock %}
+        <section class="contacts" id="contacts">
+            <div class="lets">
+                {% block individual %}<h1>Давайте обсудим ваш новый проект!</h1> {% endblock %}<br>
+                <p>Заполните форму или позвоните нам 
+                    для бесплатной консультации +7 (777) 777 77-77</p><br>
+                <p><a href="#">info@mysite.ru</a></p>
+            </div>
+            <div class="table">
+                <form action="{% url 'contacts' %}" method="post">
+                    {% csrf_token %}
+                    <table>
+                        <tr>
+                            <th class="tabletxt">Имя *</th>
+                            <th class="tabletxt">Фамилия</th>
+                        </tr>
+                        <tr>
+                            <td><input name="name" type="text"></td>
+                            <td><input name="surname" class="fio" type="text"></td>
+                        </tr>
+                        <tr>
+                            <th class="tabletxt">Эл.почта *</th>
+                            <th class="tabletxt">Телефон *</th>
+                        </tr>
+
+                        <tr>
+                            <td><input name="email" type="text"></td>
+                            <td><input name="phonenum" class="tel" type="text"></td>
+                        </tr>
+                        <tr>
+                            <th class="tabletxt">Адрес</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input class="adress" name="address" type="text"></td>
+                        </tr>
+                        <tr>
+                            <th class="tabletxt">Тема обращении *</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input class="theme" name="theme" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input class="submit" type="submit"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="icons">
+            <a href="https://twitter.com/?lang=ru"><i class="fa-brands fa-twitter"></i></i></a>
+            <a href="https://ru-ru.facebook.com/"><i class="fa-brands fa-facebook-f"></i></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footer">
+            <a href=""><p class="mes"><i class="fa-solid fa-message"></i></p></i></a>
+            <a href=""><p>Мы онлайн</p></a>
+        </div>
+    </footer>
+</body>
+</html>

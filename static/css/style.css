@@ -1,0 +1,570 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 20;
+    height: 120px;
+    background-color: white;
+    
+}
+
+.logo{
+    width: 30%;
+    text-align: center;
+}
+
+.logo .inner{
+    height: 120px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2% 17%;
+}
+
+.logo-text{
+    display: inline-block;
+    margin: 1%;
+    text-align: start;
+}
+
+.logo-text a{
+    text-decoration: none;
+    color: black;
+}
+
+.head{
+    font-weight: 550;
+    font-size: 1.3rem;
+}
+
+.menu{
+    width: 65%;
+    text-align: end;
+}
+
+.menu .inner{
+    margin: 0.7%;
+    margin-top: 80px;
+}
+
+.menu .inner a{
+    margin: 1%;
+    text-decoration: none;
+    color: black;
+    transition: color 0.5s ease;
+}
+
+.menu .inner a:hover{
+    color: rgb(126, 65, 65);
+}
+
+.main{
+    width: 90%;
+    margin: 0 auto;
+    height: 1000px;
+    background-image: url(../image/a.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: grayscale(0.5);
+    display: grid;
+    place-items: center start;
+    padding-left: 2%;
+}
+
+.h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: clamp(1rem, 4rem, 5rem);
+    color: rgb(255, 255, 255);
+    text-align: start;
+    width: 55%;
+    font-weight: 600;
+    line-height: 120px; 
+}
+
+.but a input{
+    width: 200px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    letter-spacing: 0.7px;
+    font-size: medium;
+    transition: color 0.5s;
+}
+
+.but a input:hover{
+    color: rgb(126, 65, 65);
+    cursor: pointer;
+}
+.second{
+    padding-top: 70px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.second-img{
+    width: 50%;
+    height: 600px;
+    background-image: url(../image/k.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.second-text{
+    width: 40%;
+    text-align: start;
+}
+
+.second-text p{
+    padding: 50px;
+    padding-left: 0;
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+}
+
+.second-text h1{
+    font-size: 2.5rem;
+    line-height: 50px;
+}
+
+.second-text a input{
+    width: 8rem;
+    height: 40px;
+    border: none;
+    text-align: center;
+    background: black;
+    color: white;
+    letter-spacing: 0.7px;
+    transition: background 0.5s;
+}
+
+.second-text a input:hover{
+    background: rgb(185, 118, 41);
+    cursor: pointer;
+}
+
+.services{
+    background-color: #dbdbdb;
+    width: 100%;
+    margin-top: 2px;
+}
+
+.services h1{
+    font-size: 2.5rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 90px 60px 60px 30px;
+    letter-spacing: 0.4px;
+    text-align: center;
+}
+
+.cards{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card{
+    height: clamp(10em, 500px, 800px);
+    background-size: cover;
+    font-size: clamp(0.7rem, 1.5rem, 1.5rem);
+    display: grid;
+    place-items: center;
+    color: #fff;
+}
+
+.card a:hover{
+    color:#a26028;
+    transition: color 0.5;
+}
+
+.card a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+
+.card1{
+    width: 30%;
+    background-image: url(../image/k.jpg);
+}
+
+.card2{
+    width: 30%;
+    background-image: url(../image/bath.png);
+}
+
+.card3{
+    width: 30%;
+    background-image: url(../image/inter.jpg);
+}
+
+
+.btn{
+    text-align: center;
+    padding: 2%;
+}
+
+.btn a input{
+    width: 150px;
+    height: 40px;
+    background: black;
+    border: none;
+    color: white;
+    transition: background 0.5s;
+}
+
+.btn a input:hover{
+    background: rgb(185, 118, 41);
+    cursor: pointer;
+}
+
+.contacts{
+    background-color: rgb(37, 37, 37);
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 7%;
+}
+
+.lets{
+    width: 60%;
+    color: white;
+    margin: 0 auto;
+}
+
+.lets h1{
+    width: 70%;
+    font-size: 1.5rem;
+    text-align: start;
+
+}
+
+.lets p{
+    font-size: 1rem;
+    width: 70%;
+    line-height: 30px;
+    text-align: start;
+}
+
+.lets p a{
+    text-decoration: none;
+    color: white;
+}
+
+.table{
+    margin: 0 auto;
+}
+
+.tabletxt{
+    text-align: start;
+    letter-spacing: 0.5px;
+    line-height: 40px;
+    color: #fff;
+}
+
+input[type="text"] {
+    color: #fff;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+td input{
+    width: 95%;
+    background: rgb(37, 37, 37);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid white;
+    text-decoration: underline;
+    height: 30px;
+}
+
+.fio .tel .adress .theme{
+    width: 100%;
+}
+
+.submit{
+    width: 100%;
+    height: 40px;
+    border: none;
+    color: rgb(0, 0, 0);
+    background: white;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: color 0.5s;
+}
+
+.submit:hover{
+    color: rgb(126, 65, 65);
+    cursor: pointer;
+    border: none;
+}
+
+.submit:focus{
+    border: none;
+}
+
+td input:focus{
+    border-bottom: 3px solid white;
+    outline: none;
+}
+
+td input:hover{
+    border-bottom: 3px solid white;
+    cursor: text;
+}
+
+footer{
+    width: 100%;
+    height: 70px;
+}
+
+.icons{
+    margin: 2% auto;
+    width: 100%;
+    text-align: center;
+}
+
+.icons a{
+    font-size: 1.5rem;
+    padding: 0.5%;
+    text-decoration: none;
+    color: black;
+
+}
+
+.footer{
+    width: 200px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: #a26028;
+    text-align: center;
+    
+}
+
+.mes{
+    margin-left: 10%;
+}
+.footer p{
+    margin-top: 10%;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.footer a i{
+    float: left;
+}
+
+.footer a{
+    text-decoration: none;
+}
+
+.invisible {
+    height: 120px;
+    width: 100%;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: greenyellow;
+}
+
+.bath {
+    width: 75%;
+    margin: 1% auto;
+    display: flex;
+    flex-direction: column;
+}
+/* backgrounds for rooms */
+
+.bathroom1 {
+    background: url(../image/vannaja-haj-tek.jpg);
+}
+
+.bathroom2 {
+    background: url(../image/vannaya-v-sredizemnomorskom-stile.jpg);
+}
+
+.bathroom3 {
+    background: url(../image/intereri-vannikh-komnat-7.jpg);
+}
+
+.bathroom4 {
+    background: url(../image/minimalbath.jpg);
+}
+
+.kitchen1 {
+    background: url(../image/kitchen1.jpeg);
+}
+
+.kitchen2 {
+    background: url(../image/kitchen2.png);
+}
+
+.kitchen3 {
+    background: url(../image/kitchen3.jpeg);
+}
+
+.kitchen4 {
+    background: url(../image/kitchen4.jpg);
+}
+
+.interior1 {
+    background: url(../image/interior1.jpg);
+}
+
+.interior2 {
+    background: url(../image/interior2.jpeg);
+}
+
+.interior3 {
+    background: url(../image/interior3.jpg);
+}
+
+.interior4 {
+    background: url(../image/interior4.jpg);
+}
+
+/* backgrounds for rooms */
+
+.inner-room1, .inner-room2, .inner-room3, .inner-room4 {
+    margin: 1%;
+    height: 10em;
+    box-shadow: 0 0 15px gray;
+    background-size: 100%;
+    background-position: center center;
+    border-radius: 10px;
+    justify-content: space-around;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, background-size 2s linear;
+}
+
+.inner-room1 span, .inner-room2 span, .inner-room3 span, .inner-room4 span {
+    background: linear-gradient(180deg, #79461ac1, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.inner-room1:hover, .inner-room2:hover, .inner-room3:hover, .inner-room4:hover {
+    transform: translate(0, 10px);
+    background-size: 90%;
+}
+
+.rooms  a input {
+    border-radius: 5px;
+    background: #ffffff83;
+    width: 200px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    letter-spacing: 0.7px;
+    font-size: medium;
+    transition: color 0.5s;
+}
+
+.rooms a input:hover{
+    color: rgb(126, 65, 65);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .bath {
+        width: 90%;
+    }
+
+    .inner-room1, .inner-room2, .inner-room3, .inner-room4 {
+        height: 5em;
+        font-size: 1.5rem;
+        box-shadow: 0 0 7px gray;
+    }
+
+    .rooms a input {
+        width: 100px;
+        height: 20px;
+        font-size: 0.7rem;
+    }
+
+    .head {
+        font-size: 1rem;
+    }
+
+    .menu {
+        width: 40%;
+        font-size: 0.5rem;
+    }
+
+    td input {
+        width: 50%;
+    }
+
+    .submit {
+        width: 50%;
+    }
+
+    .table {
+        width: 70%;
+    }
+
+    .tabletxt {
+        font-size: 0.7rem;
+    }
+
+    .contacts {
+        padding: 1% 3%;
+    }
+
+    tr {
+        width: 50%;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .h1 {
+        line-height: 50px;
+        font-size: 2rem;
+    }
+
+    .lets h1 {
+        font-size: 1rem;
+    }
+
+    .lets p {
+        font-size: 0.5rem
+    }
+
+    #about .second-text h1 {
+        font-size: 1rem;
+        line-height: 20px;
+    }
+}
