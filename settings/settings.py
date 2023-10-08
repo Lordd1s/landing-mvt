@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-+kdb+)8k=pq7%spzusr+sh(n(8mubl)y20-#q96@0^h#8p#@bf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['lxrdd1s.pythonanywhere.com']
 
 
 # Application definition
@@ -116,10 +116,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "static/"
-STATICFILES_DIRS = [Path(BASE_DIR / "static")]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+MEDIA_ROOT = '/home/lxrdd1s/landingMvt/media'
+MEDIA_URL = '/media/'
+STATIC_ROOT = '/home/lxrdd1s/landingMvt/static'
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [Path(BASE_DIR / "static")]
