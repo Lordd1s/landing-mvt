@@ -20,7 +20,7 @@
             <div><a href=""><img src="{% static 'image/logo.png' %}" alt=""/></a></div>
 
             <div class="logo-text">
-              <a href="{% url 'home' %}"><span class="head">КВ-Ремстрой</span></a>
+              <a href="{% url 'index' %}"><span class="head">КВ-Ремстрой</span></a>
             </div>
 
             {% if error %}
@@ -36,7 +36,7 @@
         {% block menu %}
         <div class="menu">
           <div class="inner">
-            <a href="{% url 'home' %}">Главная</a>
+            <a href="{% url 'index' %}">Главная</a>
             <a href="#about">О нас</a>
             <a href="#service">Услуги</a>
             <a href="#contacts">Контакты</a>
